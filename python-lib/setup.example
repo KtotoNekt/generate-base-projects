@@ -1,0 +1,10 @@
+from setuptools import setup
+
+
+setup(
+    name='<name>',
+    small_description="Small description",
+    long_description="Long description",
+    version="0.1.0",
+    requires=<requires>
+)

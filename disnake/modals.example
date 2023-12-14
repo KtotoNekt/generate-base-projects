@@ -1,0 +1,18 @@
+import disnake
+
+from disnake.ui import Modal
+from disnake import ModalInteraction
+
+
+class TestModal(Modal):
+    def __init__(self):
+
+        components = [
+            # Список компонентов из disnake.ui
+        ]
+
+        super().__init__(title="Настройки игры", components=components)
+
+    async def callback(self, inter: ModalInteraction):
+        # Код, который будет запускаться при закрытии окна
+        pass

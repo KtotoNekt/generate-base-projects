@@ -1,0 +1,14 @@
+import disnake
+from disnake.ui import View, Button
+from disnake import MessageInteraction, Embed
+
+
+class CheckView(View):
+    def __init__(self):
+        super().__init__(timeout=None)
+    
+    @disnake.ui.button(label="Проверка", style=disnake.ButtonStyle.danger)
+    async def handle_click(self, button: Button, inter: MessageInteraction):
+        embed = Embed(title="Работает!", description="Проверка окончена", color=disnake.Color.green())
+        await inter.response.send_message(embed=embed)
+        

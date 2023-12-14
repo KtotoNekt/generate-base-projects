@@ -1,0 +1,37 @@
+{
+    "create-venv": true,
+    "requires": [
+        "setuptools"
+    ],
+    "options": {
+        "name": "<name>",
+        "requires": "<requires>"
+    },
+    "folders": [
+        {
+            "name": "<name>",
+            "files": [
+                {
+                    "name": "__init__.py"
+                }
+            ]
+        },
+        {
+            "name": "tests",
+            "files": [
+                {
+                    "name": "<name>-test.py"
+                },
+                {
+                    "name": "__init__.py"
+                }
+            ]
+        }
+    ],
+    "files": [
+        {
+            "name": "setup.py",
+            "example": "setup.example"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+import disnake
+from disnake.ext import commands
+
+
+class CheckHandler(commands.Cog):
+    def __init__(self, bot: commands.Bot):
+        self.bot = bot
+
+    @commands.slash_command(name="check", description="Проверка работоспособности бота")
+    async def check(self, inter: disnake.ApplicationCommandInteraction):
+        await inter.response.send_message("Готов к работе")
+
+
+def setup(bot):
+    bot.add_cog(CheckHandler(bot))
+    

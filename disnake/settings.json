@@ -1,0 +1,44 @@
+{
+    "create-venv": true,
+    "requires": [
+        "disnake"
+    ],
+    "folders": [
+        {
+            "name": "cogs",
+            "files": [
+                {
+                    "name": "event.py",
+                    "example": "event.example"
+                },
+                {
+                    "name": "check.py",
+                    "example": "check.example"
+                }
+            ]
+        },
+        {
+            "name": "bot",
+            "files": [
+                {
+                    "name": "views.py",
+                    "example": "views.example"
+                },
+                {
+                    "name": "modals.py",
+                    "example": "modals.example"
+                }
+            ]
+        }
+    ],
+    "files": [
+        {
+            "name": "main.py",
+            "example": "main.example"
+        },
+        {
+            "name": ".env",
+            "content": "TOKEN="
+        }
+    ]
+}
