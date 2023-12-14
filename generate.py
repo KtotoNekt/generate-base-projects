@@ -1,7 +1,7 @@
 #!/bin/python
 import os
 
-from os.path import join, exists
+from os.path import join, exists, isdir
 from json import load
 from subprocess import check_call
 from shutil import copyfile
@@ -10,9 +10,10 @@ from argparse import ArgumentParser
 
 # Setup
 abs_path = "/".join(__file__.split("/")[0:-1])
-base_projects = os.listdir(abs_path)
-base_projects.remove(__file__.split("/")[-1])
-
+base_projects = []
+for file in os.listdir(abs_path):
+    if isdir(join(abs_path, file)) and not file.startswith("."):
+        base_projects.append(file)
 
 # Create args
 args_parser = ArgumentParser("generate-project")
